@@ -1,0 +1,269 @@
+
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+
+@prefix ca: <http://floss.syr.edu/ontologies/2008/4/contentAnalysis.owl#> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix vivo: <http://vivoweb.org/ontology/core#> .
+
+@prefix bioj: <http://james.howison.name/ontologies/bio-journal-sample#> .
+@prefix citec: <http://james.howison.name/ontologies/software-citation-coding#> .
+@prefix bioj-cited: <http://james.howison.name/ontologies/bio-journal-sample-citation#> .
+@prefix pmcid: <https://www.ncbi.nlm.nih.gov/pmc/articles/> .
+@prefix pmcid-cited: <http://james.howison.name/ontologies/pmcid-journal-sample-citation#> .
+@prefix dc: <http://dublincore.org/documents/2012/06/14/dcmi-terms/> .
+
+# https://howisonlab.github.io/softcite-pdf-files/pdf-files/pmc_oa_files/PMC5425650.pdf
+pmcid:PMC5425650 rdf:type bioj:article ;
+
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "meganpearson" ;
+          ca:appliesCode [ rdf:type citec:coded_no_in_text_mentions ;
+                           citec:isPresent false; # true/false
+                         ] ;
+        ] ;
+
+    citec:has_in_text_mention pmcid:PMC5425650_MP01 ;
+    citec:has_in_text_mention pmcid:PMC5425650_MP02 ;
+    citec:has_in_text_mention pmcid:PMC5425650_MP03 ;
+    citec:has_in_text_mention pmcid:PMC5425650_MP04 ;
+    citec:has_in_text_mention pmcid:PMC5425650_MP05 ;
+    citec:has_in_text_mention pmcid:PMC5425650_MP06 ;
+    citec:has_in_text_mention pmcid:PMC5425650_MP07 ;
+    citec:has_in_text_mention pmcid:PMC5425650_MP08 ;
+    citec:has_in_text_mention pmcid:PMC5425650_MP09 ;
+
+.
+
+pmcid:PMC5425650_MP01 rdf:type citec:in_text_mention ; # use in text mention name
+    citec:full_quote """The FLG was synthesized as follows: 400 mg of EG was shortly ultrasonicated in 200 ml of toluene in a low-power sonic bath sonicator (Elma sonic 102168022)""" ; # use triple quotes
+
+    citec:on_pdf_page 2 ; # integer
+
+    citec:spans_pages true ; # true/false
+
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "meganpearson" ;
+          ca:appliesCode [ rdf:type citec:mention_type ;
+                           rdfs:label """hardware""" ; # put one in triple quotes
+                           ca:certainty 9 ; # integer
+                           ca:memo """googled it""" ; # use triple quotes
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "meganpearson" ;
+          ca:appliesCode [ rdf:type citec:software_was_used ;
+                           citec:isPresent false; # true/false
+                         ] ;
+        ] ;
+.
+
+
+pmcid:PMC5425650_MP02 rdf:type citec:in_text_mention ; # use in text mention name
+    citec:full_quote """and a tip soni-cator (BandelinSonopuls2200) at 10% power, for 5 min""" ; # use triple quotes
+
+    citec:on_pdf_page 2 ; # integer
+
+    citec:spans_pages false ; # true/false
+
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "meganpearson" ;
+          ca:appliesCode [ rdf:type citec:mention_type ;
+                           rdfs:label """hardware""" ; # put one in triple quotes
+                           ca:certainty 10 ; # integer
+                           ca:memo """googled it""" ; # use triple quotes
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "meganpearson" ;
+          ca:appliesCode [ rdf:type citec:software_was_used ;
+                           citec:isPresent false; # true/false
+                         ] ;
+        ] ;
+.
+
+pmcid:PMC5425650_MP03 rdf:type citec:in_text_mention ; # use in text mention name
+    citec:full_quote """The microwave experiment was carried out in a Mars (CEM Corp.) microwave oven in four reactors at 600 W of power and 160°C for 10 min.""" ; # use triple quotes
+
+    citec:on_pdf_page 2 ; # integer
+
+    citec:spans_pages false ; # true/false
+
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "meganpearson" ;
+          ca:appliesCode [ rdf:type citec:mention_type ;
+                           rdfs:label """hardware""" ; # put one in triple quotes
+                           ca:certainty 9 ; # integer
+                           ca:memo """googled it""" ; # use triple quotes
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "meganpearson" ;
+          ca:appliesCode [ rdf:type citec:software_was_used ;
+                           citec:isPresent false; # true/false
+                         ] ;
+        ] ;
+.
+
+pmcid:PMC5425650_MP04 rdf:type citec:in_text_mention ; # use in text mention name
+    citec:full_quote """The transmission electron microscopy (TEM) was per-formed on Topcon 002B microscope working at 200 kV ac-celerated voltage with a point-to-point resolution of 0.17 nm.""" ; # use triple quotes
+
+    citec:on_pdf_page 2 ; # integer
+
+    citec:spans_pages false ; # true/false
+
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "meganpearson" ;
+          ca:appliesCode [ rdf:type citec:mention_type ;
+                           rdfs:label """hardware""" ; # put one in triple quotes
+                           ca:certainty 10 ; # integer
+                           ca:memo """googled it""" ; # use triple quotes
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "meganpearson" ;
+          ca:appliesCode [ rdf:type citec:software_was_used ;
+                           citec:isPresent false; # true/false
+                         ] ;
+        ] ;
+.
+
+pmcid:PMC5425650_MP05 rdf:type citec:in_text_mention ; # use in text mention name
+    citec:full_quote """The scanning electron microscopy (SEM) was carried out on a Jeol JSM-6700F""" ; # use triple quotes
+
+    citec:on_pdf_page 2 ; # integer
+
+    citec:spans_pages false ; # true/false
+
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "meganpearson" ;
+          ca:appliesCode [ rdf:type citec:mention_type ;
+                           rdfs:label """hardware""" ; # put one in triple quotes
+                           ca:certainty 10 ; # integer
+                           ca:memo """googled it""" ; # use triple quotes
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "meganpearson" ;
+          ca:appliesCode [ rdf:type citec:software_was_used ;
+                           citec:isPresent false; # true/false
+                         ] ;
+        ] ;
+.
+
+pmcid:PMC5425650_MP06 rdf:type citec:in_text_mention ; # use in text mention name
+    citec:full_quote """X-ray photoelectron spectroscopy (XPS) analyses was performed with a MULTILAB 2000 (THERMO) spectrome-ter equipped with Al K  anode""" ; # use triple quotes
+
+    citec:on_pdf_page 2 ; # integer
+
+    citec:spans_pages false ; # true/false
+
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "meganpearson" ;
+          ca:appliesCode [ rdf:type citec:mention_type ;
+                           rdfs:label """hardware""" ; # put one in triple quotes
+                           ca:certainty 10 ; # integer
+                           ca:memo """googled it""" ; # use triple quotes
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "meganpearson" ;
+          ca:appliesCode [ rdf:type citec:software_was_used ;
+                           citec:isPresent false; # true/false
+                         ] ;
+        ] ;
+.
+
+pmcid:PMC5425650_MP07 rdf:type citec:in_text_mention ; # use in text mention name
+    citec:full_quote """Raman spectroscopy was performed using Horiba Scien-tific Labram Aramis Raman Spectrometer (Jobin Yvontech-nolgy) with the following conditions: laser wavelength of 532.15 nm, D2 filter (1% power) and spectrum recorded in the regions from 1250 to1650 and from 2600 to 2800 cm1,""" ; # use triple quotes
+
+    citec:on_pdf_page 2 ; # integer
+
+    citec:spans_pages false ; # true/false
+
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "meganpearson" ;
+          ca:appliesCode [ rdf:type citec:mention_type ;
+                           rdfs:label """hardware""" ; # put one in triple quotes
+                           ca:certainty 10 ; # integer
+                           ca:memo """googled it""" ; # use triple quotes
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "meganpearson" ;
+          ca:appliesCode [ rdf:type citec:software_was_used ;
+                           citec:isPresent false; # true/false
+                         ] ;
+        ] ;
+.
+
+pmcid:PMC5425650_MP08 rdf:type citec:in_text_mention ; # use in text mention name
+    citec:full_quote """The electrical measurements were performed on Karl Suss PM8""" ; # use triple quotes
+
+    citec:on_pdf_page 2 ; # integer
+
+    citec:spans_pages false ; # true/false
+
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "meganpearson" ;
+          ca:appliesCode [ rdf:type citec:mention_type ;
+                           rdfs:label """hardware""" ; # put one in triple quotes
+                           ca:certainty 10 ; # integer
+                           ca:memo """googled it""" ; # use triple quotes
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "meganpearson" ;
+          ca:appliesCode [ rdf:type citec:software_was_used ;
+                           citec:isPresent false; # true/false
+                         ] ;
+        ] ;
+.
+
+pmcid:PMC5425650_MP09 rdf:type citec:in_text_mention ; # use in text mention name
+    citec:full_quote """The electrical measurements were performed on Karl Suss PM8""" ; # use triple quotes
+
+    citec:on_pdf_page 2 ; # integer
+
+    citec:spans_pages false ; # true/false
+
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "meganpearson" ;
+          ca:appliesCode [ rdf:type citec:mention_type ;
+                           rdfs:label """hardware""" ; # put one in triple quotes
+                           ca:certainty 10 ; # integer
+                           ca:memo """googled it""" ; # use triple quotes
+                         ] ;
+        ] ;
+    ca:isTargetOf
+        [ rdf:type ca:CodeApplication ;
+          ca:hasCoder "meganpearson" ;
+          ca:appliesCode [ rdf:type citec:software_was_used ;
+                           citec:isPresent false; # true/false
+                         ] ;
+        ] ;
+.
+
+#finished 2.16
+#checked for errors
+#pushed 2.28
